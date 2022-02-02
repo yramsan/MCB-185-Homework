@@ -27,26 +27,7 @@ for i in range(0, len(seq) -w):
 		gc += 1
 	print(i+1, seq[i+1:i+1+w], f'{gc/w:.4f}')
 		
-"""
-gc = 0
 
-for i in range(len(seq) -w+1):
-	if seq[0]  == 'C' or seq[0]  == 'G': gc+=1
-	if seq[1]  == 'C' or seq[1]  == 'G': gc+=1
-	if seq[2]  == 'C' or seq[2]  == 'G': gc+=1
-	if seq[3]  == 'C' or seq[3]  == 'G': gc+=1
-	if seq[4]  == 'C' or seq[4]  == 'G': gc+=1
-	if seq[5]  == 'C' or seq[5]  == 'G': gc+=1
-	if seq[6]  == 'C' or seq[6]  == 'G': gc+=1
-	if seq[7]  == 'C' or seq[7]  == 'G': gc+=1
-	if seq[8]  == 'C' or seq[8]  == 'G': gc+=1
-	if seq[9]  == 'C' or seq[9]  == 'G': gc+=1
-	if seq[10] == 'C' or seq[10] == 'G': gc+=1
-	if seq[11] == 'C' or seq[11] == 'G': gc+=1
-	print(i, seq[i:i+11], f'{gc/w:.4f}')
-	gc = 0
-	seq=seq[1:]+seq[0]
-	"""
 
 """
 python3 27gcwin.py
