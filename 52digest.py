@@ -28,11 +28,20 @@ def readfile(filename):
 					seq += word
 	return seq
 
-fragments = digest(sys.argv[1], sys.argv[2])
-if __name__ == '__main__':
-	for i in range(len(fragments)-1):
-		fragment_length = fragments[i + 1] - fragments[i]
-		print(fragment_length)
+
+def digest(seq, site):
+	fragments = [0]
+	for match in re.finditer(site, seq):
+		fragments.append(match.start())
+	fragments.append(len(seq))
+	return fragments
+
+seq = readfile(filename)
+fragments = digest(seq, site)
+for i in range(len(fragments) - 1):
+	lengths = fragments[i + 1] - fragments[i]
+	print(lengths)
+
 
 
 """
